@@ -60,18 +60,22 @@ h1 {
 .word-box {
     color: #7FFF00;
     font-size: 40px;
+    font-family: 'Amatic SC', cursive;
 }
 .letter-box {
     color: #7FFF00;
     font-size: 40px;
+    font-family: 'Amatic SC', cursive;
 }
 .guess-count {
     color: #7FFF00;
     font-size: 40px;
+    font-family: 'Amatic SC', cursive;
 }
 .win-count {
     color: #7FFF00;
     font-size: 40px;
+    font-family: 'Amatic SC', cursive;
 }
 
 
