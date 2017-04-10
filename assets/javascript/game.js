@@ -4,7 +4,7 @@ var alphabet = ['a','b','c','d','e','f',
 				'm','n','o','p','q','r',
 				's','t','u','v','w','x','y','z']
 //Words for the computer to choose from
-var candyTypes = ['skittles','airheads','starbursts', 'nerds','snickers','crunch','twix'];
+var candyTypes = ['skittles','airheads','starbursts', 'nerds','snickers','crunch','twix','twizzlers','pushpop','milkyway','redhots','butterfinger','whoppers','rolo','reeses','mounds','smarties'];
 
 var computerChoice = "";
 
@@ -12,14 +12,14 @@ var charactersInWord = [];
 
 var letterBlanks = 0;
 
-var successfulGuesses = [];
+var guessedCorrect = [];
 
 var wrongLetters = [];
 
 //Counters
 var winCount = 0;
 var loseCount = 0; 
-var guessesRemaining = 10;
+var guessesLeft = 10;
 var rightGuess = 0;
 
 
@@ -35,8 +35,8 @@ function reset () {
 	rightGuess = 0;
 	guessesLeft = 10;
 	wrongLetters =[];
-	successfulGuesses =[];
-	alphabet = ['a','b','c',
+	guessedCorrect =[];
+	doubleWord = ['a','b','c',
 					  'd','e','f',
 					  'g','h','i',
 					  'j','k','l',
@@ -58,8 +58,8 @@ function startGame() {
 	rightGuess = 0;
 	guessesLeft = 10;
 	wrongLetters =[];
-	successfulGuesses =[];
-	alphabet = ['a','b','c',
+	guessedCorrect =[];
+	doubleWord = ['a','b','c',
 					  'd','e','f',
 					  'g','h','i',
 					  'j','k','l',
@@ -71,12 +71,12 @@ function startGame() {
 
 	for(var i = 0; i< letterBlanks; i++)
 	{
-		successfulGuesses.push('_');
-		document.getElementById('wordToGuess').innerHTML = successfulGuesses;
+		guessedCorrect.push('_');
+		document.getElementById('wordToGuess').innerHTML = guessedCorrect;
 	}
 
 
-	document.getElementById('wordToGuess').innerHTML = successfulGuesses.join(' ');
+	document.getElementById('wordToGuess').innerHTML = guessedCorrect.join(' ');
 	document.getElementById('guessesLeft').innerHTML = guessesLeft;
 	document.getElementById('winCounter').innerHTML = winCount;
 	document.getElementById('lossCounter').innerHTML = loseCount;
@@ -86,18 +86,23 @@ function startGame() {
 	console.log(computerChoice);
 	console.log(charactersInWord);
 	console.log(letterBlanks);
-	console.log(successfulGuesses);
+	console.log(guessedCorrect);
 }
 
 function duplicateLetters(userKey) {
+
+console.log('WORKING!!!!');
+
 	if (computerChoice.indexOf(userKey) > -1) {
-		for (var i = 0; i< letterBlanks; i++) {
+		for (var i = 0; i < letterBlanks; i++) {
 			if (charactersInWord[i] === userKey) {
 				rightGuess++; 
-				successfulGuesses[i] == userKey; 
-				document.getElementById('wordToGuess').innerHTML = successfulGuesses.join(' ');
+				guessedCorrect[i] = userKey; 
+				document.getElementById('wordToGuess').innerHTML = guessedCorrect.join(' ');
 			}
 		}
+
+		console.log(guessedCorrect);
 	}
 	else {
 		wrongLetters.push(userKey);
@@ -105,6 +110,9 @@ function duplicateLetters(userKey) {
 		
 		document.getElementById('guessesLeft').innerHTML = guessesLeft;
 		document.getElementById('usedLetters').innerHTML = wrongLetters;
+
+		console.log('Wrong Letters=' +wrongLetters);
+		console.log('Guesses Left=' + guessesLeft);
 	}
 }
 
@@ -136,14 +144,12 @@ document.onkeyup = function(event)
 {
 	test = true;
 	var usedLetters = event.key;
-	for(var i = 0; i < alphabet.length; i++)
+	for(var i = 0; i < doubleWord.length; i++)
 	{	
-		if(usedLetters === alphabet[i] && test === true)
+		if(usedLetters === doubleWord[i] && test === true)
 		{
-			var spliceAlphabet = alphabet.splice(i,1);
+			var spliceDword = doubleWord.splice(i,1);
 			//Test / Debug
-			console.log('Double word is = ' + alphabet[i])
-			console.log('Spliced Word is = ' + spliceAlphabet);
 
 			duplicateLetters(usedLetters);
 			winLose();

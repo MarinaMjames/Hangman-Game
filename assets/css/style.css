@@ -57,3 +57,33 @@ h1 {
 #lossCounter {
     display: none;
 }
+.word-box {
+    color: #7FFF00;
+    font-size: 40px;
+}
+.letter-box {
+    color: #7FFF00;
+    font-size: 40px;
+}
+.guess-count {
+    color: #7FFF00;
+    font-size: 40px;
+}
+.win-count {
+    color: #7FFF00;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
