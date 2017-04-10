@@ -1,3 +1,10 @@
+body {
+    background-color: black;
+}
+h1 {
+    color: white;
+}
+
 /* Clip text element */
 .clip-text {
     font-size: 6em;
@@ -10,16 +17,13 @@
     /* Color fallback */
     color: #fff;
     -webkit-background-clip: text;
-
     -webkit-text-fill-color: transparent;
 }
-
 .clip-text:before,
 .clip-text:after {
     position: absolute;
     content: '';
 }
-
 /* Background */
 .clip-text:before {
     z-index: -2;
@@ -29,7 +33,6 @@
     left: 0;
     background-image: inherit;
 }
-
 /* Text Background (black zone) */
 .clip-text:after {
     position: absolute;
@@ -40,27 +43,17 @@
     left: .125em;
     background-color: #000;
 }
-
 /* Change the background position to display letter when the black zone isn't here */
 .clip-text--no-textzone:before {
     background-position: -.65em 0;
 }
-
 .clip-text--no-textzone:after {
     content: none;
 }
-
-/* Use Background-size cover for photo background and no-repeat background */
-.clip-text--cover,
-.clip-text--cover:before {
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-            background-size: cover;
-  background-position: 50% 50%;
-}
-
-/* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
-.clip-text_one {
+.clip-text_fifteen {
+    background-image: url(https://cloud.githubusercontent.com/assets/26077051/24782546/e82db1e8-1b14-11e7-90fb-6f872ab1cc14.jpg);
     width: 100%;
-    background-image: url(http://cdn8.staztic.com/app/a/6278/6278761/hd-abstract-wallpapers-1-0-s-307x512.jpg);
+}
+#lossCounter {
+    display: none;
 }
