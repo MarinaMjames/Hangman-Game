@@ -1,58 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Hangman Game</title>
   
-  <!-- Bootstrap CDN -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+  
   <!--Google Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
       <!--Reset css link-->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!--Custom css link-->
+     <!-- Bootstrap CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--Custom css link-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="assets/javascript/game.js" type="text/javascript"></script>
 
 </head>
 
 <body>
   <div class="container">
-    <div class="clip-text clip-text_fifteen clip-text--no-textzone">HANGMAN</div>
-    <div>Candy Edition</div>
+    <div class="header col-xs-12 col-sm-12 col-md-12 col-lg-12">HANGMAN</div>
+    <div id="candy"><div><img class="imageSpin" src="https://cloud.githubusercontent.com/assets/26077051/24937140/a08f8d02-1efc-11e7-8114-c48ff514c7a7.png">Candy Edition<img class="imageSpin" src="https://cloud.githubusercontent.com/assets/26077051/24937140/a08f8d02-1efc-11e7-8114-c48ff514c7a7.png"></div>
+  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+  </div>
 
-  <div class="word-box pull-left">
+  <div class="word-box col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <div>
       Word to Guess:
       <br> <span id="wordToGuess"></span>
     </div>
   </div>
 
-  <div class="letter-box pull-right">
-    <div>
+  <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+
+  <div class="counter-box col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    <div class="letter-box">
       Wrong Guesses: <span id="usedLetters"></span>
     </div>
-  </div>
-
-  <div class="guess-count pull-left">
-    <div>
+    <div class="guess-count">
       Guesses Left: <span id="guessesLeft"></span>
     </div>
-  </div>
-
-  <div class="win-count pull-right">
-    <div>
+    <div class="win-count">
       Win Counter: <span id="winCounter">0</span>
     </div>
   </div>
-  
-  <div id="lossCounter">
-    <div>
-      Loss Counter:  <span>0</span>
-    </div>
+
+  <div id="lossCounter" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
   </div>
-  
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vWxZWF80hs0?autoplay=1" frameborder="0" allowfullscreen></iframe>
 </div>
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>

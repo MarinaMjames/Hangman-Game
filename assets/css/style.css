@@ -1,84 +1,88 @@
 body {
-    background-color: black;
+    background-color: #330033;
 }
-h1 {
-    color: white;
-}
-
-/* Clip text element */
-.clip-text {
-    font-size: 6em;
-    font-weight: bold;
-    line-height: 1;
-    position: relative;
-    display: inline-block;
-    padding: .5em .75em;
-    text-align: center;
-    /* Color fallback */
-    color: #fff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.clip-text:before,
-.clip-text:after {
-    position: absolute;
-    content: '';
-}
-/* Background */
-.clip-text:before {
-    z-index: -2;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: inherit;
-}
-/* Text Background (black zone) */
-.clip-text:after {
-    position: absolute;
-    z-index: -1;
-    top: .125em;
-    right: .125em;
-    bottom: .125em;
-    left: .125em;
-    background-color: #000;
-}
-/* Change the background position to display letter when the black zone isn't here */
-.clip-text--no-textzone:before {
-    background-position: -.65em 0;
-}
-.clip-text--no-textzone:after {
-    content: none;
-}
-.clip-text_fifteen {
+.header{
     background-image: url(https://cloud.githubusercontent.com/assets/26077051/24782546/e82db1e8-1b14-11e7-90fb-6f872ab1cc14.jpg);
     width: 100%;
+    -webkit-text-fill-color: black;
+    text-align: center;
+    font-size: 100px;
+    padding: 40px;
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
 }
+#candy {
+    color: #7FFF00;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 60px;
+}
+.imageSpin {
+    height: 80px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 #lossCounter {
     display: none;
 }
 .word-box {
     color: #7FFF00;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Amatic SC', cursive;
+    padding-bottom: 160px;
+    border-color: #FF4500;
+    border-style: dotted;
+    border-width: 4px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 60px;
 }
 .letter-box {
     color: #7FFF00;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Amatic SC', cursive;
+    padding-bottom: 60px;
 }
 .guess-count {
     color: #7FFF00;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Amatic SC', cursive;
+    padding-bottom: 60px;
 }
 .win-count {
     color: #7FFF00;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Amatic SC', cursive;
+    padding-bottom: 60px;
 }
+.counter-box {
+    border-color: #FF4500;
+    border-style: dotted;
+    border-width: 4px;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 50px;
+}
+iframe {
+    display: none;
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
 
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
 
 
 

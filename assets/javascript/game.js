@@ -111,7 +111,7 @@ console.log('WORKING!!!!');
 		document.getElementById('guessesLeft').innerHTML = guessesLeft;
 		document.getElementById('usedLetters').innerHTML = wrongLetters;
 
-		console.log('Wrong Letters=' +wrongLetters);
+		console.log('Wrong Letters=' + wrongLetters);
 		console.log('Guesses Left=' + guessesLeft);
 	}
 }
@@ -149,7 +149,7 @@ document.onkeyup = function(event)
 		if(usedLetters === doubleWord[i] && test === true)
 		{
 			var spliceDword = doubleWord.splice(i,1);
-			//Test / Debug
+		
 
 			duplicateLetters(usedLetters);
 			winLose();
