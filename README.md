@@ -9,3 +9,5 @@ Visit the website here: https://marinamjames.github.io/Hangman-Game/
 `HTML` 
 `Bootstrap CSS`
 `Javascript`
+
+## Screenshot
