@@ -10,4 +10,8 @@ Visit the website here: https://marinamjames.github.io/Hangman-Game/
 `Bootstrap CSS`
 `Javascript`
 
-## Screenshot
+## Screenshots
+![screen shot 2017-08-02 at 4 37 55 pm](https://user-images.githubusercontent.com/26077051/28893886-0f8582f0-77a1-11e7-8e68-abdd50e090f7.png)
+![screen shot 2017-08-02 at 4 38 06 pm](https://user-images.githubusercontent.com/26077051/28893887-0f8c73c6-77a1-11e7-9217-d9e3a1777fc2.png)
+![screen shot 2017-08-02 at 4 38 17 pm](https://user-images.githubusercontent.com/26077051/28893891-11505bb4-77a1-11e7-88fe-1852df0bd4db.png)
+![screen shot 2017-08-02 at 4 38 30 pm](https://user-images.githubusercontent.com/26077051/28893892-11504f20-77a1-11e7-81f1-a453ec5581f5.png)
